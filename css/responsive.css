@@ -155,6 +155,7 @@
 
 /* Mobile Phones */
 @media screen and (max-width: 576px) {
+
     :root {
         --space-xxl: 4rem;
         --space-xl: 2.5rem;
@@ -212,3 +213,5 @@
         text-align: center;
     }
 }
+
+
