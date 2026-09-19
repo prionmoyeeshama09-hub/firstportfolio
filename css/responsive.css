@@ -1,0 +1,214 @@
+/* 
+=========================================
+  RESPONSIVE CSS
+=========================================
+*/
+
+/* Laptop & Small Desktop */
+@media screen and (max-width: 1200px) {
+    .hero-container {
+        gap: var(--space-lg);
+    }
+    
+    .floating-ui {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-location {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-visual {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: var(--space-xl);
+    }
+    
+    .about-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-visual {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-timeline::before {
+        display: none;
+    }
+    
+    .process-timeline {
+        flex-direction: column;
+        gap: var(--space-lg);
+        padding-top: 0;
+    }
+    
+    .process-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step-number {
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablet Portrait & Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        transition: left var(--transition-base);
+        z-index: 1000;
+        padding: var(--space-xl);
+    }
+    
+    .main-nav.open {
+        left: 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+    
+    .nav-cta {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card.large {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+    
+    .portfolio-card.large .portfolio-image {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    .portfolio-card.large .portfolio-content {
+        width: 100%;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-brand, .footer-links, .footer-contact {
+        margin-bottom: var(--space-lg);
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 576px) {
+    :root {
+        --space-xxl: 4rem;
+        --space-xl: 2.5rem;
+        --space-lg: 1.5rem;
+    }
+    
+    .hero {
+        padding-top: 100px;
+    }
+    
+    .floating-ui {
+        display: none; /* Hide decorative floating elements on small screens */
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+    
+    .about-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .skills-badges {
+        justify-content: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+}
